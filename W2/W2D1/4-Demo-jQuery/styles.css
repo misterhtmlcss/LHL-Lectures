@@ -1,0 +1,81 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: grey;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size:18px;
+  padding: 0;
+  margin: 0;
+}
+
+h2, p, ul, a {
+  background-color: black;
+  padding: 20px;
+}
+
+input{
+  background-color:rgba(255,255,255,0.8);
+  border:none;
+  display: inline-block;
+}
+button{
+  display: inline-block;
+}
+section.story{
+  text-align: center;
+}
+
+ul{
+  padding: 20px 20px 50px 20px ;
+  border: 2px double white;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+.night{
+  color:rgb(11, 4, 73);
+}
+
+a {
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-bottom: 4px solid lightblue;
+  position: relative;
+  z-index: 2;
+}
+
+/* .do-cool:hover {
+  background-color: aliceblue;
+  border-bottom: 4px solid green;
+  color: rgb(11, 4, 73);
+  transform: scaleY(1.2);
+  position: relative;
+}
+*/
+
+.do-cool::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: transform 200ms ease-in;
+}
+
+.do-cool:hover::after {
+  height: 100%;
+  background: rgb(0,0,0,0.4);
+  transform: scaleX(1);
+  /* transition: background 500 ease-in; */
+  z-index: 3;
+}
