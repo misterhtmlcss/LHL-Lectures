@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lightgoldenrodyellow;
+}
+
+.title {
+  font-size: 15em;
+}
+
+button {
+  margin-left: 10px;
+}
+
