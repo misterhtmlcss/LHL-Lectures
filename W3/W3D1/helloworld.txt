@@ -1,0 +1,33 @@
+// index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css'
+
+function HelloMessage (params) {
+
+  return (
+    <div className="title">
+      Hello, I am {params.name}!!
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <React.StrictMode>
+    <HelloMessage name={"Bob Seger"} />
+  </React.StrictMode>
+  ,
+  document.getElementById('root')
+);
+
+
+// index.css
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 10em;
+}
