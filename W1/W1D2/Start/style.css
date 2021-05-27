@@ -1,0 +1,20 @@
+html, body {
+  background: rgb(249, 253, 196);
+}
+
+.apache {
+  height: 32px;
+  width: 259px;
+}
+
+.W3C {
+  height:31px;
+  width:88px;
+}
+
+hr {
+  height: 2px;
+  background: red;
+}
+
+
