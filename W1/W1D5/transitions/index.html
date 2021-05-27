@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition-1</title>
+    <style>
+      body {
+        padding: 10px;
+        font-size: 3em;
+      }
+      section {
+        display: flex;
+      }
+
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+      }
+
+      .bg-blue,
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        min-width: 200px;
+        margin: 10px;
+        background: blue;
+        color: white;
+      }
+
+      /* Focus below this line */
+      /* Notice on First that the transition is simultaneous */
+      .first {
+        transition-duration: 750ms;
+        transition-delay: 500ms;
+        /* Ease-in is the default */
+        transition-timing-function: ease-in;
+        /* transition-timing-function: ease-out; */
+        /* transition-timing-function: linear; */
+      }
+
+      .first:hover {
+        background: lightblue;
+        transform: rotate(45deg);
+      }
+      /* Notice how the transition happens in two parts */
+      .second {
+        transition-duration: 1550ms;
+        transition-delay: 500ms;
+        transition-timing-function: ease-in;
+        transition-property: transform;
+      }
+      .second:hover {
+        background: lightblue;
+        transform: rotate(45deg);
+      }
+
+      .third {
+        transition-duration: 1250ms;
+        transition-property: border-radius;
+        transition-timing-function: ease-out;
+      }
+      .third:hover {
+        border-radius: 50%;
+      }
+
+      p {
+        color: blue;
+        background: transparent;
+        box-shadow: 1px 1px 4px blue;
+      }
+
+      .fourth::selection {
+        background: orange;
+      }
+
+      progress {
+        /* padding-left: 20px; */
+        /* background-color: green; */
+        /* appearance: none; */
+        /* width: 220px; */
+        height: 60px;
+        /* border-radius: 50%; */
+        /* color: black; */
+      }
+
+      /* General Sibling Selector */
+      div.left ~ div {
+        border-bottom: 10px solid lightcoral;
+      }
+
+      div.bg-blue ~ div {
+        border-bottom: 10px solid lightseagreen;
+      }
+
+      .bar-holder {
+        width: 60%;
+        background-color:lightcoral;
+        border-radius: 20px;
+        margin: 0 auto;
+      }
+
+      .bar-2 {
+        width: 20%;
+        background-color: black;
+        color: #fff;
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 15px;
+        font-weight: 400;
+      }
+
+      progress {
+        -webkit-appearance: none;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="left">
+        <div class="bg-blue first">First</div>
+        <div class="bg-blue second">Second</div>
+        <div class="bg-blue third">Third</div>
+        <!-- <div class="fourth">Fourth</div>
+        <div class="fifth">Fifth</div> -->
+        <div class="bg-blue fourth">Fourth</div>
+      </div>
+      <div class="right">
+        <p>First</p>
+        <p>Second</p>
+        <p>Third</p>
+        <!-- <p>Fourth</p>
+        <p>Fifth</p> -->
+        <p>Fourth</p>
+      </div>
+    </section>
+    <div class="bg-blue">
+      <!--
+        The <meter> tag defines a scalar measurement within a known range, or a fractional value. This is also known as a gauge.
+
+        Examples are:
+        Battery Charge, Disk usage, the relevance of a query result, etc.
+      -->
+      <label for="form-completion"
+        >Meter=Form Completion:
+        <meter id="form-completion" value="2" min="0" max="10">
+          2 out of 10
+        </meter>
+      </label>
+    </div>
+    <h1>CSS Progress Bars</h1>
+    <div class="bar-holder">
+      <div class="bar">20%</div>
+    </div>
+
+    <div class="bar-holder">
+      <div class="bar-2">40%</div>
+    </div>
+
+    <div class="bg-blue">
+      <label for="file">Progress=Downloading progress:</label>
+      <progress id="file" value="32" max="100">32%</progress>
+      <!-- <progress id="file">32%</progress> -->
+    </div>
+  </body>
+</html>

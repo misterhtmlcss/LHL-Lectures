@@ -1,0 +1,116 @@
+:root{
+  --selector: lightslategray;
+  --declaration:crimson;
+
+  --value: rgba(239,8,115, 0.1);
+  --property: rgba(190,182,26, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Mono', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main {
+  line-height: 2;
+}
+
+header, section {
+  display: flex;
+  justify-content: center;
+
+}
+header {
+  color: var(--selector);
+}
+
+
+
+.css {
+  display: flex;
+  padding: 25px 0;
+  margin: 10px 0;
+  background: var(--declaration);
+  border: 2px solid var(--declaration);
+  font-size: 2em;
+}
+
+.css p {
+  display: flex;
+  align-self: flex-start;
+  margin-right: 20px;
+  margin-left: 15px;
+  padding: 0 20px;
+  color: white;
+  background: var(--selector);
+  border: 2px solid var(--selector);
+}
+
+.css p:hover {
+  border: 2px solid red;
+}
+
+code {
+  padding: 6px 15px;
+  margin-right: 15px;
+  color: black;
+  background: var(--declaration);
+  border: 2px solid var(--declaration);
+}
+
+code:hover {
+  border: 2px solid red;
+}
+
+code div {
+  margin-left: 40px;
+}
+
+code div {
+  color: var(--value);
+}
+
+code div span {
+  color: var(--property);
+}
+
+.legend {
+  display: flex;
+}
+
+.legend ul {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+
+.selector, .declaration, .value, .property {
+  list-style-type: none;
+  border-left: 30px solid var(--selector);
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.declaration {
+  border-left-color: var(--declaration);
+}
+
+.property {
+  border-left-color: var(--property);
+}
+
+.value {
+  border-left-color: var(--value);
+}
+
+
